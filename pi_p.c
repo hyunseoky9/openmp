@@ -22,13 +22,16 @@ int main ()
 		double x;
 		int start = id*share;
 		int finish = start + share; 
+		int sumaddedsep = 0;
 		printf("start=%d, finish=%d\n",start,finish);
 		for (i=start; i<finish; i++)
 		{
 			x = (i+0.5)*step;
 			sum += 4.0/(1.0+x*x);
 			sumadded++;
+			sumaddedsep++;
 		}
+		printf("sumaddedsep=%d\n",sumaddedsep)
 	}
 	pi = step*sum;
 	printf("pi=%.7f, sumadded=%d\n",pi,sumadded);
