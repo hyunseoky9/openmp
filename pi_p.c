@@ -2,10 +2,11 @@
 #include <stdio.h>
 static long num_steps = 100000;
 double step;
-int omp_get_num_threads();
+/*int omp_get_num_threads();
 int omp_get_thread_num();
 int omp_set_num_threads();
 double omp_get_wtime();
+*/
 int main ()
 {
 	omp_set_num_threads(10);
