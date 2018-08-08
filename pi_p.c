@@ -13,6 +13,7 @@ int main ()
 	int thrnum = omp_get_num_threads();
 	int share = num_steps/thrnum; //share of the steps
 	double pi, sum=0.0;
+	int sumadded = 0;
 	step = 1.0/(double) num_steps;
 	#pragma omp parallel
 	{
@@ -26,10 +27,11 @@ int main ()
 		{
 			x = (i+0.5)*step;
 			sum += 4.0/(1.0+x*x);
+			sumadded++;
 		}
 	}
 	pi = step*sum;
-	printf("pi=%.7f\n",pi);
+	printf("pi=%.7f, sumadded=%d\n",pi,sumadded);
 	/*
 	int i;
 	double x, pi, sum=0.0;
