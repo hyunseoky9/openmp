@@ -21,6 +21,7 @@ int main ()
 		double x;
 		int start = id*share;
 		int finish = start + share; 
+		printf("start=%d, finish=%d\n",start,finish);
 		for (i=start; i<finish; i++)
 		{
 			x = (i+0.5)*step;
